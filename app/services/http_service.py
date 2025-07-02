@@ -1,8 +1,9 @@
+import os
 import httpx
 from fastapi import HTTPException
 
-API_URL = "https://api.thecatapi.com/v1"
-API_KEY = "live_JBT0Ah0Nt12iyl2IpjQVLDWjcLk0GQwf4zI9wBMfmfejKm"
+API_URL = os.getenv("API_URL", "https://api.thecatapi.com/v1")
+API_KEY = os.getenv("API_KEY", "live_JBT0Ah0Nt12iyl2IpjQVLDWjcLk0GQwf4zI9wBMfmfejKm")
 
 HEADERS = {"x-api-key": API_KEY}
 
